@@ -20,3 +20,7 @@ Using `sudo systemctl enable hello.service` allows the service to start on boot.
 ```
 sudo ./register_cron.sh
 ```
+### Crontab Entry
+```
+"*/5 * * * * root /home/paxtonw/monitor_script.sh ssh mysql apache2 smbd hello"
+```
