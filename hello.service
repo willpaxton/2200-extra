@@ -1,0 +1,16 @@
+[Unit]
+Description=Log "Hello, world!" to a log file once a minute
+After=network.target
+
+[Service]
+ExecStart=/home/paxtonw/hello_script.sh
+User=root
+StandardOutput=journal
+StandardInput=journal
+WorkingDirectory=/home/paxtonw
+
+
+[Install]
+WantedBy=multi-user.target
+
+# use sudo systemctl enable hello.service to start on boot
