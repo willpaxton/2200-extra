@@ -11,8 +11,8 @@ sudo ./monitor_script.sh ssh mysql apache2 smbd hello
 
 ## Start/Stopping the Custom Service
 The custom hello service prints "Hello, world!" to a log file once a minute.
-The custom service is managed by systemctl.  The service can be started with `systemctl start hello.service` and stopped with `systemctl stop hello.service`.
-Using `sudo systemctl enable hello.service` allows the service to start on botm.  
+The custom service is managed by systemctl.  The service can be started with `systemctl start hello.service` and stopped with `systemctl stop hello.service` (with elevated permissions).
+Using `sudo systemctl enable hello.service` allows the service to start on boot.  
 
 ## Cron Job
 `register_cron.sh` adds an entry to crontab that will run the monitoring script every five minutes.  More specifically, this script checks if the entry exists, and if it doesn't, it will append the crontab entry to the end of the crontab file and restart cron to ensure that it is active.  
