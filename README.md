@@ -22,5 +22,5 @@ sudo ./register_cron.sh
 ```
 ### Crontab Entry
 ```
-"*/5 * * * * root /home/paxtonw/monitor_script.sh ssh mysql apache2 smbd hello"
+*/5 * * * * root /home/paxtonw/monitor_script.sh ssh mysql apache2 smbd hello
 ```
